@@ -22,11 +22,11 @@ for /F "tokens=* USEBACKQ" %%a in (
 
 :: Kill RiotClientServices
 taskkill /F /IM RiotClientServices.exe
-timeout 2 > NUL
 
 :: Kill LeagueClient
 taskkill /F /IM LeagueClient.exe
-timeout 5 > NUL
+
+timeout 3 > NUL
 
 :: Start RiotClientServices
 start "" %cmd_line%
